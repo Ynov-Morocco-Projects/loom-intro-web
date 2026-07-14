@@ -1,4 +1,4 @@
-import type { IconName } from "@/lib/data";
+import type { IconName } from "@/lib/content";
 
 const paths: Record<IconName, string> = {
   people: '<path d="M9 7a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM2 21a7 7 0 0114 0M16 4a3.5 3.5 0 010 7M22 21a7 7 0 00-5-6.7"/>',

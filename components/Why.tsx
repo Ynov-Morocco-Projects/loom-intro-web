@@ -1,23 +1,27 @@
-import { whyItems } from "@/lib/data";
+"use client";
+
+import { useLang } from "@/lib/LanguageContext";
 
 export default function Why() {
+  const { t } = useLang();
+  const w = t.why;
   return (
     <section className="section-pad" id="why">
       <div className="wrap">
         <div className="section-head center reveal">
-          <span className="eyebrow"><span className="dot" /> Why LOOM</span>
+          <span className="eyebrow"><span className="dot" /> {w.eyebrow}</span>
           <h2 className="h-1" style={{ marginTop: 16 }}>
-            Built for the way
+            {w.heading[0]}
             <br />
-            modern teams actually work.
+            {w.heading[1]}
           </h2>
         </div>
         <div className="why-grid">
-          {whyItems.map((w, i) => (
-            <div className={`why-card reveal${i % 3 ? " d" + (i % 3) : ""}`} key={w.title}>
+          {w.items.map((item, i) => (
+            <div className={`why-card reveal${i % 3 ? " d" + (i % 3) : ""}`} key={item.title}>
               <div className="wn">0{i + 1}</div>
-              <h4>{w.title}</h4>
-              <p>{w.desc}</p>
+              <h4>{item.title}</h4>
+              <p>{item.desc}</p>
             </div>
           ))}
         </div>

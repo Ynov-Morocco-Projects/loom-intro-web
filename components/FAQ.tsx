@@ -2,20 +2,22 @@
 
 import { useState } from "react";
 import Icon from "./Icon";
-import { faqs } from "@/lib/data";
+import { useLang } from "@/lib/LanguageContext";
 
 export default function FAQ() {
+  const { t } = useLang();
+  const faq = t.faq;
   const [open, setOpen] = useState<number | null>(null);
 
   return (
     <section className="section-pad" id="faq">
       <div className="wrap">
         <div className="section-head center reveal">
-          <span className="eyebrow"><span className="dot" /> FAQ</span>
-          <h2 className="h-1" style={{ marginTop: 16 }}>Questions, answered.</h2>
+          <span className="eyebrow"><span className="dot" /> {faq.eyebrow}</span>
+          <h2 className="h-1" style={{ marginTop: 16 }}>{faq.heading}</h2>
         </div>
         <div className="faq-wrap reveal">
-          {faqs.map((f, i) => {
+          {faq.items.map((f, i) => {
             const isOpen = open === i;
             return (
               <div className={`faq-item${isOpen ? " open" : ""}`} key={f.q}>

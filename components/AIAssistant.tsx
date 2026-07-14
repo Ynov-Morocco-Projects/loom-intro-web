@@ -1,26 +1,26 @@
+"use client";
+
 import Icon from "./Icon";
 import Chat from "./Chat";
-import { aiCapabilities } from "@/lib/data";
+import { useLang } from "@/lib/LanguageContext";
 
 export default function AIAssistant() {
+  const { t, lang } = useLang();
+  const a = t.ai;
   return (
     <section className="section-pad" id="ai">
       <div className="wrap">
         <div className="ai-grid">
           <div className="reveal">
-            <span className="eyebrow"><span className="dot" /> LOOM Copilot</span>
+            <span className="eyebrow"><span className="dot" /> {a.eyebrow}</span>
             <h2 className="h-1" style={{ marginTop: 16 }}>
-              An HR expert that
+              {a.heading[0]}
               <br />
-              never sleeps.
+              {a.heading[1]}
             </h2>
-            <p className="lead">
-              Powered by large language models, the LOOM assistant understands
-              your policies, your data and your people — and acts on them in
-              plain conversation.
-            </p>
+            <p className="lead">{a.lead}</p>
             <div className="ai-caps">
-              {aiCapabilities.map((c) => (
+              {a.capabilities.map((c) => (
                 <div className="ai-cap" key={c}>
                   <span className="cdot"><Icon name="check" size={13} stroke={2.5} /></span> {c}
                 </div>
@@ -28,7 +28,7 @@ export default function AIAssistant() {
             </div>
           </div>
           <div className="reveal d1">
-            <Chat />
+            <Chat key={lang} />
           </div>
         </div>
       </div>

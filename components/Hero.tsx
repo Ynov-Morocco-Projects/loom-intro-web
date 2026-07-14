@@ -1,4 +1,7 @@
+"use client";
+
 import Icon from "./Icon";
+import { useLang } from "@/lib/LanguageContext";
 
 function FloatCard({
   className,
@@ -25,6 +28,8 @@ function FloatCard({
 }
 
 export default function Hero() {
+  const { t } = useLang();
+  const h = t.hero;
   return (
     <section className="hero" id="top">
       <div className="hero-glow" />
@@ -32,35 +37,31 @@ export default function Hero() {
         <div className="hero-grid">
           <div className="hero-copy">
             <div className="hero-pill reveal">
-              <span className="tag">New</span>
+              <span className="tag">{h.badge}</span>
               <span>
-                Conversational HR copilot powered by <b>LLMs</b>
+                {h.pillPre}<b>{h.pillBold}</b>
               </span>
             </div>
             <h1 className="h-display reveal d1">
-              HR, woven
+              {h.headline[0]}
               <br />
-              across the
+              {h.headline[1]}
               <br />
-              <span className="grad-text">universe of work.</span>
+              <span className="grad-text">{h.headline[2]}</span>
             </h1>
-            <p className="hero-sub reveal d2">
-              LOOM unites Human Resources and Artificial Intelligence into one
-              intelligent ecosystem — automating the repetitive, surfacing the
-              meaningful, and connecting every thread of your workforce.
-            </p>
+            <p className="hero-sub reveal d2">{h.sub}</p>
             <div className="hero-actions reveal d3">
               <a className="btn btn-primary btn-lg" href="#contact">
-                Request a demo <Icon name="arrow" size={17} stroke={2.2} />
+                {h.primaryCta} <Icon name="arrow" size={17} stroke={2.2} />
               </a>
               <a className="btn btn-glass btn-lg" href="#ai">
-                Meet the AI assistant
+                {h.secondaryCta}
               </a>
             </div>
             <div className="hero-trust reveal d3">
-              <span><Icon name="check" size={15} stroke={2.5} className="ok" /> No credit card</span>
-              <span><Icon name="check" size={15} stroke={2.5} className="ok" /> SOC 2 &amp; GDPR ready</span>
-              <span><Icon name="check" size={15} stroke={2.5} className="ok" /> Setup in days</span>
+              <span><Icon name="check" size={15} stroke={2.5} className="ok" /> {h.trust[0]}</span>
+              <span><Icon name="check" size={15} stroke={2.5} className="ok" /> {h.trust[1]}</span>
+              <span><Icon name="check" size={15} stroke={2.5} className="ok" /> {h.trust[2]}</span>
             </div>
           </div>
 
@@ -83,15 +84,15 @@ export default function Hero() {
               className="fc-a"
               iconBg="linear-gradient(135deg,#8B5CF6,#6D28D9)"
               icon={<Icon name="plus" size={18} />}
-              k="Onboarding"
-              v="Automated ✦"
+              k={h.floatA.k}
+              v={h.floatA.v}
             />
             <FloatCard
               className="fc-b"
               iconBg="linear-gradient(135deg,#2DD4BF,#0F766E)"
               icon={<Icon name="trend" size={18} />}
-              k="Retention"
-              v="+18.4%"
+              k={h.floatB.k}
+              v={h.floatB.v}
             />
           </div>
         </div>

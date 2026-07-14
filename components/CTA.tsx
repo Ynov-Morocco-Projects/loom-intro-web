@@ -1,25 +1,27 @@
+"use client";
+
 import Icon from "./Icon";
+import { useLang } from "@/lib/LanguageContext";
 
 export default function CTA() {
+  const { t } = useLang();
+  const c = t.cta;
   return (
     <section className="section-pad cta-final">
       <div className="wrap">
         <div className="cta-box reveal">
           <div className="inner">
             <h2 className="h-1">
-              Ready to weave AI
+              {c.heading[0]}
               <br />
-              into your people team?
+              {c.heading[1]}
             </h2>
-            <p>
-              Join the companies building a smarter, more human workplace with
-              LOOM. See it live in a 20-minute demo.
-            </p>
+            <p>{c.text}</p>
             <div className="hero-actions">
               <a className="btn btn-primary btn-lg" href="#contact">
-                Request a demo <Icon name="arrow" size={17} stroke={2.2} />
+                {c.primary} <Icon name="arrow" size={17} stroke={2.2} />
               </a>
-              <a className="btn btn-glass btn-lg" href="#contact">Start free trial</a>
+              <a className="btn btn-glass btn-lg" href="#contact">{c.secondary}</a>
             </div>
           </div>
         </div>

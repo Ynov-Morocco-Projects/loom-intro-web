@@ -23,7 +23,24 @@
       "Bash(curl -s http://localhost:3000 -o /dev/null -w \"status:%{http_code} size:%{size_download}\\\\n\")",
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --hide-scrollbars --window-size=1440,900 --virtual-time-budget=5000 --screenshot=\"/c/Users/UltraPc/AppData/Local/Temp/claude/c--Users-UltraPc-Downloads-Inspiration-design-parfait-loom-app/096e5a38-49e5-4a54-89d1-e29275249d6f/scratchpad/loom-logo-nav2.png\" \"http://localhost:3000\")",
       "Bash(netstat -ano)",
-      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --hide-scrollbars --window-size=1440,900 --virtual-time-budget=5000 --screenshot=\"/c/Users/UltraPc/AppData/Local/Temp/claude/c--Users-UltraPc-Downloads-Inspiration-design-parfait-loom-app/096e5a38-49e5-4a54-89d1-e29275249d6f/scratchpad/loom-logo-nav3.png\" \"http://localhost:3002\")"
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --hide-scrollbars --window-size=1440,900 --virtual-time-budget=5000 --screenshot=\"/c/Users/UltraPc/AppData/Local/Temp/claude/c--Users-UltraPc-Downloads-Inspiration-design-parfait-loom-app/096e5a38-49e5-4a54-89d1-e29275249d6f/scratchpad/loom-logo-nav3.png\" \"http://localhost:3002\")",
+      "Bash(mkdir -p \"c:\\\\Users\\\\UltraPc\\\\Downloads\\\\Inspiration design parfait\\\\loom-app\\\\lib\\\\content\")",
+      "Bash(npx tsc *)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s http://localhost:3001/)",
+      "Bash(chromium-cli --session loomfr)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(npx --yes playwright install chromium --with-deps)",
+      "Bash(node \"C:\\\\Users\\\\UltraPc\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-UltraPc-Downloads-Inspiration-design-parfait-loom-app\\\\674f85ff-dffc-498a-8075-a10c44590ff5\\\\scratchpad\\\\verify_i18n.js\")",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(node verify_i18n.js)",
+      "Bash(node verify_sections.js)",
+      "Bash(node -e ' *)",
+      "Bash(rm -f \"C:\\\\Users\\\\UltraPc\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-UltraPc-Downloads-Inspiration-design-parfait-loom-app\\\\674f85ff-dffc-498a-8075-a10c44590ff5\\\\scratchpad\"/*.png)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\UltraPc\\Downloads\\Inspiration design parfait\\loom-app\\lib"
     ]
   }
 }

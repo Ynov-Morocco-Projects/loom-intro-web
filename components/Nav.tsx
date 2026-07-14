@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import LoomMark from "./LoomMark";
 import Icon from "./Icon";
-import { navLinks } from "@/lib/data";
+import { useLang } from "@/lib/LanguageContext";
 
 export default function Nav() {
+  const { lang, setLang, t } = useLang();
+  const navLinks = t.nav.links;
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -30,12 +32,29 @@ export default function Nav() {
             ))}
           </nav>
           <div className="nav-cta">
-            <a className="link-quiet" href="#">Sign in</a>
-            <a className="btn btn-primary" href="#contact">Request a demo</a>
+            <div className="lang-switch" role="group" aria-label="Language">
+              <button
+                type="button"
+                className={lang === "fr" ? "active" : ""}
+                onClick={() => setLang("fr")}
+                aria-pressed={lang === "fr"}
+              >
+                {t.langSwitcher.fr}
+              </button>
+              <button
+                type="button"
+                className={lang === "en" ? "active" : ""}
+                onClick={() => setLang("en")}
+                aria-pressed={lang === "en"}
+              >
+                {t.langSwitcher.en}
+              </button>
+            </div>
+            <a className="btn btn-primary" href="#contact">{t.nav.cta}</a>
           </div>
           <button
             className="nav-burger"
-            aria-label="Menu"
+            aria-label={t.nav.menuAria}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
           >
@@ -49,7 +68,7 @@ export default function Nav() {
           <a key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
         ))}
         <a className="btn btn-primary" href="#contact" onClick={() => setOpen(false)}>
-          Request a demo <Icon name="arrow" size={17} stroke={2.2} />
+          {t.nav.cta} <Icon name="arrow" size={17} stroke={2.2} />
         </a>
       </div>
     </>

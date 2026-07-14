@@ -2,11 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import Icon from "./Icon";
-import { chatScript, type ChatMessage } from "@/lib/data";
+import { useLang } from "@/lib/LanguageContext";
+import type { ChatMessage } from "@/lib/content";
 
 interface Rendered extends ChatMessage { typing?: boolean; }
 
 export default function Chat() {
+  const { t } = useLang();
+  const chatScript = t.chat.script;
   const ref = useRef<HTMLDivElement>(null);
   const [shown, setShown] = useState<Rendered[]>([]);
   const started = useRef(false);
@@ -67,8 +70,8 @@ export default function Chat() {
       <div className="chat-head">
         <span className="ava"><Icon name="onboard" size={22} /></span>
         <div className="ci">
-          <b>LOOM Copilot</b>
-          <span>online · LLM-powered</span>
+          <b>{t.chat.name}</b>
+          <span>{t.chat.status}</span>
         </div>
       </div>
       <div className="bubbles">
@@ -91,7 +94,7 @@ export default function Chat() {
         ))}
       </div>
       <div className="chat-input">
-        <span>Ask anything about your people…</span>
+        <span>{t.chat.inputPlaceholder}</span>
         <span className="send"><Icon name="send" size={16} stroke={2.2} /></span>
       </div>
     </div>

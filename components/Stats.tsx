@@ -1,7 +1,11 @@
+"use client";
+
 import Counter from "./Counter";
-import { stats } from "@/lib/data";
+import { useLang } from "@/lib/LanguageContext";
 
 export default function Stats() {
+  const { t } = useLang();
+  const stats = t.stats;
   return (
     <section className="section-pad">
       <div className="wrap">

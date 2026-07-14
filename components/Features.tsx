@@ -1,28 +1,29 @@
+"use client";
+
 import Icon from "./Icon";
-import { features } from "@/lib/data";
+import { useLang } from "@/lib/LanguageContext";
 
 export default function Features() {
+  const { t } = useLang();
+  const f = t.features;
   return (
     <section className="section-pad" id="features">
       <div className="wrap">
         <div className="section-head center reveal">
-          <span className="eyebrow"><span className="dot" /> The full suite</span>
+          <span className="eyebrow"><span className="dot" /> {f.eyebrow}</span>
           <h2 className="h-1" style={{ marginTop: 16 }}>
-            Eleven modules.
+            {f.heading[0]}
             <br />
-            One woven constellation.
+            {f.heading[1]}
           </h2>
-          <p className="lead">
-            Each piece of the employee experience, intelligently connected — so
-            nothing falls through the cracks.
-          </p>
+          <p className="lead">{f.lead}</p>
         </div>
         <div className="features-grid">
-          {features.map((f, i) => (
-            <div className={`fcard reveal${i % 4 ? " d" + (i % 4) : ""}`} key={f.title}>
-              <div className="fi"><Icon name={f.icon} size={21} /></div>
-              <h4>{f.title}</h4>
-              <p>{f.desc}</p>
+          {f.items.map((item, i) => (
+            <div className={`fcard reveal${i % 4 ? " d" + (i % 4) : ""}`} key={item.title}>
+              <div className="fi"><Icon name={item.icon} size={21} /></div>
+              <h4>{item.title}</h4>
+              <p>{item.desc}</p>
             </div>
           ))}
         </div>

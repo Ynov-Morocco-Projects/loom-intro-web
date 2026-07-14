@@ -1,34 +1,30 @@
-import LoomMark from "./LoomMark";
+"use client";
 
-const cols = [
-  { h: "Platform", links: [["Features", "#features"], ["AI Copilot", "#ai"], ["Pricing", "#pricing"], ["Lifecycle", "#lifecycle"]] },
-  { h: "Company", links: [["About", "#"], ["Careers", "#"], ["Customers", "#"], ["Blog", "#"]] },
-  { h: "Resources", links: [["Help center", "#faq"], ["Security", "#"], ["Privacy", "#"], ["Status", "#"]] },
-];
+import LoomMark from "./LoomMark";
+import { useLang } from "@/lib/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLang();
+  const f = t.footer;
   return (
     <footer className="footer">
       <div className="wrap">
         <div className="foot-grid">
           <div className="foot-brand">
             <a className="brand" href="#top"><LoomMark className="mark" /> LOOM</a>
-            <p>
-              The AI-powered HR platform where human expertise and large
-              language models work as one thread.
-            </p>
+            <p>{f.description}</p>
           </div>
-          {cols.map((c) => (
-            <div className="foot-col" key={c.h}>
-              <h5>{c.h}</h5>
-              {c.links.map(([label, href]) => (
-                <a href={href} key={label}>{label}</a>
+          {f.columns.map((c) => (
+            <div className="foot-col" key={c.header}>
+              <h5>{c.header}</h5>
+              {c.links.map((l) => (
+                <a href={l.href} key={l.label}>{l.label}</a>
               ))}
             </div>
           ))}
         </div>
         <div className="foot-bottom">
-          <span>© 2026 LOOM Technologies. All rights reserved.</span>
+          <span>{f.copyright}</span>
           <div className="foot-social">
             <a href="#" aria-label="X">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.8l-5.3-7-6.1 7H1.6l8.2-9.4L1 2h6.9l4.8 6.4L18.9 2z" /></svg>
