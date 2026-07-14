@@ -66,9 +66,9 @@ export default function DashboardMock() {
             <div className="panel">
               <h5>Time-off requests</h5>
               <div className="people">
-                <Person initials="AK" color="#7F00FF" name="Aria Khan" sub="Vacation · 3d" badge="Approved" badgeClass="green" />
-                <Person initials="JL" color="#2BC9B6" name="Jon Lee" sub="Sick · 1d" badge="Approved" badgeClass="green" />
-                <Person initials="RP" color="#FFB25E" textColor="#3a2600" name="Ravi Patel" sub="Parental · 12w" badge="Pending" badgeClass="amber" />
+                <Person initials="AK" color="#7C3AED" name="Aria Khan" sub="Vacation · 3d" badge="Approved" badgeClass="green" />
+                <Person initials="JL" color="#2DD4BF" name="Jon Lee" sub="Sick · 1d" badge="Approved" badgeClass="green" />
+                <Person initials="RP" color="#FBBF24" textColor="#3a2600" name="Ravi Patel" sub="Parental · 12w" badge="Pending" badgeClass="amber" />
               </div>
             </div>
           </div>

@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -rniE \"#7F00FF|#6B00DB|#B47CFF|#CDB0FF|#34E5D0|#FFB25E|#001F3F|--purple|--cyan|--amber|--navy|127,0,255|52,229,208|255,178,94|180,124,255\" --include=\"*.tsx\" --include=\"*.ts\" -l \"$\\(pwd\\)/components\" \"$\\(pwd\\)/app\" \"$\\(pwd\\)/lib\")",
+      "Bash(grep -nE \"#7F00FF|#6B00DB|#B47CFF|#CDB0FF|#34E5D0|#FFB25E|#001F3F|127,0,255|52,229,208|255,178,94|180,124,255|#[0-9A-Fa-f]{6}|rgba?\\\\\\(\" \"$\\(pwd\\)/components/DashboardMock.tsx\" \"$\\(pwd\\)/components/Hero.tsx\" \"$\\(pwd\\)/components/Showcase.tsx\" \"$\\(pwd\\)/components/Starfield.tsx\" \"$\\(pwd\\)/lib/data.ts\")",
+      "Bash(echo \"sweep done, exit=$?\")",
+      "Bash(npm run *)",
+      "Read(//tmp/**)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(chromium-cli --help)",
+      "Bash(node -e \"require.resolve\\('playwright'\\)\")",
+      "Bash(npx --no-install playwright --version)",
+      "Bash(mkdir -p \"/c/Users/UltraPc/AppData/Local/Temp/claude/c--Users-UltraPc-Downloads-Inspiration-design-parfait-loom-app/096e5a38-49e5-4a54-89d1-e29275249d6f/scratchpad\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --hide-scrollbars --window-size=1440,4000 --screenshot=\"/c/Users/UltraPc/AppData/Local/Temp/claude/c--Users-UltraPc-Downloads-Inspiration-design-parfait-loom-app/096e5a38-49e5-4a54-89d1-e29275249d6f/scratchpad/loom-full.png\" \"http://localhost:3001\")",
+      "Read(//c/Users/UltraPc/AppData/Local/Temp/claude/c--Users-UltraPc-Downloads-Inspiration-design-parfait-loom-app/096e5a38-49e5-4a54-89d1-e29275249d6f/scratchpad//**)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --hide-scrollbars --window-size=1440,900 --virtual-time-budget=4000 --screenshot=\"/c/Users/UltraPc/AppData/Local/Temp/claude/c--Users-UltraPc-Downloads-Inspiration-design-parfait-loom-app/096e5a38-49e5-4a54-89d1-e29275249d6f/scratchpad/loom-full2.png\" \"http://localhost:3001\" --run-all-compositor-stages-before-draw)",
+      "Bash(python3 -c \"print\\('ok'\\)\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --hide-scrollbars --window-size=1440,6000 --virtual-time-budget=6000 --screenshot=\"/c/Users/UltraPc/AppData/Local/Temp/claude/c--Users-UltraPc-Downloads-Inspiration-design-parfait-loom-app/096e5a38-49e5-4a54-89d1-e29275249d6f/scratchpad/loom-full3.png\" \"http://localhost:3001\")",
+      "Bash(taskkill //F //IM node.exe //FI \"WINDOWTITLE eq *loom*\")",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --hide-scrollbars --window-size=1440,900 --virtual-time-budget=4000 --screenshot=\"/c/Users/UltraPc/AppData/Local/Temp/claude/c--Users-UltraPc-Downloads-Inspiration-design-parfait-loom-app/096e5a38-49e5-4a54-89d1-e29275249d6f/scratchpad/loom-logo-nav.png\" \"http://localhost:3000\")",
+      "Bash(curl -s http://localhost:3000 -o /dev/null -w \"status:%{http_code} size:%{size_download}\\\\n\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --hide-scrollbars --window-size=1440,900 --virtual-time-budget=5000 --screenshot=\"/c/Users/UltraPc/AppData/Local/Temp/claude/c--Users-UltraPc-Downloads-Inspiration-design-parfait-loom-app/096e5a38-49e5-4a54-89d1-e29275249d6f/scratchpad/loom-logo-nav2.png\" \"http://localhost:3000\")",
+      "Bash(netstat -ano)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --hide-scrollbars --window-size=1440,900 --virtual-time-budget=5000 --screenshot=\"/c/Users/UltraPc/AppData/Local/Temp/claude/c--Users-UltraPc-Downloads-Inspiration-design-parfait-loom-app/096e5a38-49e5-4a54-89d1-e29275249d6f/scratchpad/loom-logo-nav3.png\" \"http://localhost:3002\")"
+    ]
+  }
+}

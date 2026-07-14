@@ -81,14 +81,14 @@ export default function Hero() {
             <div className="orb-sat" />
             <FloatCard
               className="fc-a"
-              iconBg="linear-gradient(135deg,#9A3CFF,#6B00DB)"
+              iconBg="linear-gradient(135deg,#8B5CF6,#6D28D9)"
               icon={<Icon name="plus" size={18} />}
               k="Onboarding"
               v="Automated ✦"
             />
             <FloatCard
               className="fc-b"
-              iconBg="linear-gradient(135deg,#2BC9B6,#1E8C9E)"
+              iconBg="linear-gradient(135deg,#2DD4BF,#0F766E)"
               icon={<Icon name="trend" size={18} />}
               k="Retention"
               v="+18.4%"

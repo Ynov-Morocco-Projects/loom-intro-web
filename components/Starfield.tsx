@@ -22,7 +22,7 @@ export default function Starfield() {
       s.style.opacity = (Math.random() * 0.6 + 0.2).toFixed(2);
       s.style.animationDelay = (Math.random() * 4).toFixed(2) + "s";
       s.style.animationDuration = (Math.random() * 4 + 3).toFixed(2) + "s";
-      if (Math.random() > 0.85) s.style.boxShadow = "0 0 6px rgba(180,124,255,.9)";
+      if (Math.random() > 0.85) s.style.boxShadow = "0 0 6px rgba(183,156,255,.9)";
       frag.appendChild(s);
     }
     layer.appendChild(frag);

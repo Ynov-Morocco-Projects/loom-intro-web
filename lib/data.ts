@@ -78,9 +78,9 @@ export const showcasePoints = [
 ];
 
 export const testimonials = [
-  { initials: "EM", color: "#7F00FF", textColor: "#fff", quote: "LOOM gave our 12-person HR team the leverage of 40. The AI copilot answers 80% of employee questions before they ever reach us.", name: "Elena Moreau", role: "VP People · Northwind" },
-  { initials: "RC", color: "#2BC9B6", textColor: "#fff", quote: "Onboarding used to take two weeks of coordination. Now it's a single automated thread that runs itself. It feels like magic.", name: "Raj Chauhan", role: "Head of HR · Vertex" },
-  { initials: "AB", color: "#FFB25E", textColor: "#3a2600", quote: "The analytics caught an attrition risk in one team weeks early. We acted, and kept three brilliant engineers. That paid for LOOM many times over.", name: "Amara Bello", role: "CHRO · Lumen" },
+  { initials: "EM", color: "#7C3AED", textColor: "#fff", quote: "LOOM gave our 12-person HR team the leverage of 40. The AI copilot answers 80% of employee questions before they ever reach us.", name: "Elena Moreau", role: "VP People · Northwind" },
+  { initials: "RC", color: "#2DD4BF", textColor: "#fff", quote: "Onboarding used to take two weeks of coordination. Now it's a single automated thread that runs itself. It feels like magic.", name: "Raj Chauhan", role: "Head of HR · Vertex" },
+  { initials: "AB", color: "#FBBF24", textColor: "#3a2600", quote: "The analytics caught an attrition risk in one team weeks early. We acted, and kept three brilliant engineers. That paid for LOOM many times over.", name: "Amara Bello", role: "CHRO · Lumen" },
 ];
 
 export const stats = [

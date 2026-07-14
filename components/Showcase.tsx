@@ -10,7 +10,7 @@ function PhoneMock() {
         <div style={{ padding: "14px 12px 18px" }}>
           <div style={{ fontSize: 11, color: "var(--faint)", fontWeight: 600 }}>Hi Maya 👋</div>
           <div style={{ fontSize: 15, fontWeight: 700, margin: "2px 0 12px", color: "#fff" }}>Your day</div>
-          <div style={{ background: "rgba(127,0,255,.2)", border: "1px solid var(--panel-border)", borderRadius: 12, padding: 11, marginBottom: 9 }}>
+          <div style={{ background: "rgba(124,58,237,.2)", border: "1px solid var(--panel-border)", borderRadius: 12, padding: 11, marginBottom: 9 }}>
             <div style={{ fontSize: 10, color: "var(--purple-200)", fontWeight: 700 }}>3 APPROVALS</div>
             <div style={{ fontSize: 12, fontWeight: 600, color: "#fff" }}>Awaiting your review</div>
           </div>
